@@ -1,5 +1,5 @@
 {
     "routes": [
-      { "src": "/", "dest": "/Wedding/index.html" }
+      { "src": "/", "dest": "/Wedding/Index.html" }
     ]
   }
