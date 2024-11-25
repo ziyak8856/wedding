@@ -1,9 +1,5 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/Wedding/index.html"
-      }
+    "routes": [
+      { "src": "/", "dest": "/Wedding/index.html" }
     ]
   }
-  
