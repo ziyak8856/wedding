@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Bootstrap CSS and links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+     <!-- AOS Animation Library -->
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+      <!-- Add Bootstrap JS and AOS JS -->
+    <script src="./assets/JS/Navbar.js" defer></script>
+    <script src="./assets/JS/Footer.js" defer></script>
+    <script src="./assets/JS/Common.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body>
+
+    <!-- Navbar will be loaded here -->
+    <div id="navbar"></div>
+    <!-- Animated Carousel Section -->
+    <div class="container text-center mt-3">
+        <h1>Welcome!</h1>
+    </div>
+    <section class="hero-section">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" src="./assets/images/153A2694.JPG" class="d-block w-100" alt="First slide">
+            
+                  <div class="carousel-caption d-none d-md-block" data-aos="fade-up">
+                    <h5>“A Love Story to Remember”</h5>
+                     <p>Experience moments of joy and togetherness on your special day.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" src="./assets/images/_G5A9204.JPG" class="d-block w-100" alt="First slide">
+            
+                  <div class="carousel-caption d-none d-md-block" data-aos="fade-up">
+                    <h5>“Forever Begins Here”</h5>
+                    <p>Your wedding, your story—crafted with elegance and grace.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" src="./assets/images/DSC_8122.JPG" class="d-block w-100" alt="First slide">
+            
+                  <div class="carousel-caption d-none d-md-block" data-aos="fade-up">
+                    <h5>“Cherishing Every Smile”</h5>
+                    <p>Celebrate a journey of love, laughter, and lifelong memories.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+    </section>
+
+    <!-- Testimonial Section with Animation -->
+    <div class="testimonial-section">
+        <div class="testimonial-image">
+            <div class="testimonial-quote" data-aos="fade-up">
+                <p>" Caroline is an amazing photographer!!! She made the pictures during our wedding and they look amazing. It's like she has a third sense to capture all the interesting moments that are taking place. "</p>
+                <span class="author">— Marine & Abrar</span>
+            </div>
+            <div class="testimonial-quote" data-aos="fade-up" data-aos-delay="100">
+                <p>" Caroline is an amazing photographer!!! She made the pictures during our wedding and they look amazing. It's like she has a third sense to capture all the interesting moments that are taking place. "</p>
+                <span class="author">— Marine & Abrar</span>
+            </div>
+            <div class="testimonial-quote" data-aos="fade-up" data-aos-delay="200">
+                <p>" Caroline is an amazing photographer!!! She made the pictures during our wedding and they look amazing. It's like she has a third sense to capture all the interesting moments that are taking place. "</p>
+                <span class="author">— Marine & Abrar</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Div with Animation -->
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <!-- Left side with animation -->
+            <div class="col-md-6 animate-left" data-aos="fade-right">
+                <img src="./assets/images/DSCF9349 copy.jpg" alt="Image" loading="lazy" class="img-fluid">
+            </div>
+            <!-- Right side with details -->
+            <div class="col-md-6 details" data-aos="fade-left">
+                <h2>Our Philosophy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</p>
+                <a href="./assets/pages/About.html"><button type="button" class="btn btn-primary">Learn More</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wedding Details Section with Animation -->
+    <div class="testimonial-section-bg">
+        <section class="container my-5" data-aos="fade-up">
+            <h2 class="text-center mb-4">Wedding Details</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" data-aos="zoom-in">
+                    <a href="Event_details.html" class="text-decoration-none">
+                        <div class="card">
+                            <img src="./assets/images/_G5A0314.JPG" loading="lazy" class="card-img-top" alt="Wedding Image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">PhotoGraphy</h5>
+                                <p class="card-text">The wedding ceremony will take place on 25th December 2024.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="venue-details.html" class="text-decoration-none">
+                        <div class="card">
+                            <img src="./assets/images/DSCF9331 copy.jpg" loading="lazy" class="card-img-top" alt="Wedding Image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Venue</h5>
+                                <p class="card-text">Join us at the beautiful XYZ wedding venue in City Name.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="rsvp-details.html" class="text-decoration-none">
+                        <div class="card">
+                            <img src="./assets//images/_G5A8914.JPG" loading="lazy" class="card-img-top" alt="Wedding Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">RSVP</h5>
+                                <p class="card-text">Please confirm your presence by 10th December 2024.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer"></div>
+
+   
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1200, // Animation duration
+            once: true // Animation happens only once when scrolling into view
+        });
+    </script>
+</body>
+</html>

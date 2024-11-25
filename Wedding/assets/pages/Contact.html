@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+     <!-- Bootstrap 5 JS and AOS JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+     <!-- JavaScript -->
+     <script src="../JS/Navbar.js" defer></script>
+    <script src="../JS/Footer.js" defer></script>
+    <script src="../JS/Common.js" defer></script>
+       
+    <style>
+        .contact-section {
+            padding: 50px 0;
+        }
+        .contact-form {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+        }
+        .map-section iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+        .contact-info h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Navbar -->
+     <div id="navbar"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="contact-form">
+                        <h3 class="text-center mb-4">Contact Us</h3>
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mobileNo" class="form-label">Mobile Number</label>
+                                <input type="text" class="form-control" id="mobileNo" placeholder="Enter your Mobile Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-6 mb-4 contact-info" data-aos="fade-left">
+                    <h3>Our Office</h3>
+                    <p><strong>Address:</strong> 123 Wedding St., City, Country</p>
+                    <p><strong>Phone:</strong> +123 456 7890</p>
+                    <p><strong>Email:</strong> contact@brand.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="map-section" data-aos="fade-up">
+        <div class="container">
+            <h3 class="text-center mb-4">Find Us on the Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.234431665207!2d-73.98348078433699!3d40.74881797932817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af222bfcd1%3A0x2b5f88fcf7a5ee6a!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1635172651487!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+     <!-- Footer -->
+     <div id="footer"></div>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200,
+            once: true // Animation happens only once when scrolling into view
+        });
+    </script>
+</body>
+</html>

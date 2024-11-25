@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJROKxjK7s5+7pfM6qz4gYd28L5rf1yZlqgj2duj79uKDhmyGqqpD6gOxxpz" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap JS (for animations and interactivity) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../JS/Navbar.js" defer></script>
+    <script src="../JS/Footer.js" defer></script>
+    <script src="../JS/Common.js" defer></script>
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+        /* Card styling */
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+            opacity: 0; /* Initially hide the cards */
+            transform: translateY(100px); /* Start cards below the view */
+            transition: opacity 1s, transform 1s;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-card:hover {
+            transform: scale(1.05);
+        }
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-text {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        /* Section and Text Styling */
+        #gallery {
+            background: linear-gradient(135deg, #f7e3f0 0%, #ffffff 100%);
+            padding: 50px 0;
+        }
+        .section-title {
+            text-align: center;
+            color: #C2185B;
+            font-weight: bold;
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+        .lead {
+            color: #6b6b6b;
+        }
+    </style>
+</head>
+<body>
+ <!-- Navbar will be loaded here -->
+ <div id="navbar"></div>
+<section id="gallery">
+    <div class="container">
+        <h2 class="section-title">Our Wedding Gallery</h2>
+        <p class="lead text-center mb-5">Take a look at some of our cherished moments captured during the wedding. Each photo tells a story of love, joy, and celebration.</p>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card gallery-card">
+                    <img src="../IMAGES//wedding-image.jpg" class="card-img-top" alt="Wedding Image">
+                    <div class="gallery-overlay">
+                        <span class="gallery-text">Our First Dance</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card gallery-card">
+                    <img src="../IMAGES/image 5.jpg" class="card-img-top" alt="Wedding Image">
+                    <div class="gallery-overlay">
+                        <span class="gallery-text">Wedding Rings</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card gallery-card">
+                    <img src="../IMAGES//image 3.jpg" class="card-img-top" alt="Wedding Image">
+                    <div class="gallery-overlay">
+                        <span class="gallery-text">Ceremony Moments</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards here if necessary -->
+        </div>
+    </div>
+</section>
+ <!-- Footer -->
+ <div id="footer"></div>
+
+<script>
+// IntersectionObserver to add scroll animations to gallery cards
+const galleryCards = document.querySelectorAll('.gallery-card');
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+galleryCards.forEach(card => {
+    observer.observe(card);
+});
+</script>
+
+</body>
+</html>
